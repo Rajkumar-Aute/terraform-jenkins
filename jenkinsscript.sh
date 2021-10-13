@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 sudo apt upgrade -y
 sudo apt update
 sudo apt install openjdk-11-jdk -y
@@ -7,5 +7,7 @@ sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > \
     /etc/apt/sources.list.d/jenkins.list'
 sudo apt update
 sudo apt install jenkins -y
+sudo apt install maven -y
+mvn -version
 
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
