@@ -24,7 +24,7 @@ resource "null_resource" "null-provisionining" {
   }
 
   provisioner "file" {
-    source = "./jenkinsscript.sh"
+    source      = "./jenkinsscript.sh"
     destination = "/home/ubuntu/jenkinsscript.sh"
   }
   provisioner "remote-exec" {
@@ -33,6 +33,6 @@ resource "null_resource" "null-provisionining" {
       "chmod +x jenkinsscript.sh",
       "sh jenkinsscript.sh",
       "sudo cat /var/lib/jenkins/secrets/initialAdminPassword"
-      ]
+    ]
   }
 }

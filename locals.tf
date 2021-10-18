@@ -11,16 +11,16 @@ workspace strings has been added we can create different env using workspace
 
 locals {
 
-  anyware                = "0.0.0.0/0"
+  anyware                    = "0.0.0.0/0"
   securitygroup-name-jenkins = "security-group-jenkins-${terraform.workspace}"
 
-  ssh                    = 22
-  http                   = 80
-    http-8080                   = 8080
+  ssh       = 22
+  http      = 80
+  http-8080 = 8080
 
-  tcp                    = "tcp"
+  tcp = "tcp"
 
   // lodals for ec2
   ec2-jenkins-server-name = "ec2-jenkins-server-${terraform.workspace}"
-  ec2-ssh-key         = "terraform"
+  ec2-ssh-key             = "terraform"
 }
